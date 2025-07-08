@@ -11,4 +11,5 @@ async function loadComponent(id, filepath) {
 
 document.addEventListener("DOMContentLoaded", async () => {
   await loadComponent("header", "components/header.html");
+  await loadComponent("header", "components/footer.html");
 });
