@@ -1,9 +1,11 @@
 //Loading header.html and footer.html in JS DOM
-document.addEventListener("DOMContentLoaded", async (event) => {
-    loadComponent("header", "components/header.html"
-"./components/header.html"
-"../components/header.html");  // if HTML is nested deeper
-    
-    loadComponent("footer", "../components/footer.html");
-    console.log("DOM fully loaded and components loaded.");
-  });
+function getRelativePath(targetPath) {
+  const depth = window.location.pathname.split("/").length - 2;
+  return "../".repeat(depth) + targetPath;
+}
+
+document.addEventListener("DOMContentLoaded", async () => {
+  const path = getRelativePath("components/header.html");
+  await loadComponent("header", path);
+});
+
