@@ -17,6 +17,18 @@ hr{
   --accent-button: #D9D9D9;
 }
 
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
 .btn{
   background-color: var(--accent-color);
   font-size: 1rem;
@@ -32,4 +44,34 @@ hr{
 .btn:hover {
   background-color: var(--accent-color);
   color: white;
+}
+
+.btn-primary {
+  background-color: #ff3399;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #cc0066;
+}
+
+/* Secondary */
+.btn-secondary {
+  background-color: white;
+  color: #33ccff;
+  border: 2px solid #33ccff;
+}
+
+.btn-secondary:hover {
+  background-color: #f0f0f0;
+}
+
+/* Accent */
+.btn-accent {
+  background-color: #33ccff;
+  color: white;
+}
+
+.btn-accent:hover {
+  background-color: #1aa3cc;
 }
