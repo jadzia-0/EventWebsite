@@ -1,11 +1,14 @@
-//Loading header.html and footer.html in JS DOM
-function getRelativePath(targetPath) {
-  const depth = window.location.pathname.split("/").length - 2;
-  return "../".repeat(depth) + targetPath;
+async function loadComponent(id, filepath) {
+  try {
+    const response = await fetch(filepath);
+    if (!response.ok) throw new Error(`Failed to load ${filepath}: ${response.status}`);
+    const html = await response.text();
+    document.getElementById(id).innerHTML = html;
+  } catch (error) {
+    console.error(error);
+  }
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
-  const path = getRelativePath("components/header.html");
-  await loadComponent("header", path);
+  await loadComponent("header", "components/header.html");
 });
-
