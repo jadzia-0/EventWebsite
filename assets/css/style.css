@@ -20,7 +20,7 @@ hr{
 .btn{
   background-color: var(--accent-color);
   font-size: 1rem;
-  border: none;
+  border: 1px black;
   color: white;
   padding: 0.5em 1em;
   text-align: center;
